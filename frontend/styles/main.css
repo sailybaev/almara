@@ -10,19 +10,15 @@ a {
     text-decoration: none;
     color: white;
     font-family: 'poppins', sans-serif;
+    
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
 }
 
 .links {
@@ -34,12 +30,30 @@ header {
 
 #main {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    position: relative;
     background-image: url('../assets/main.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
+}
+
+#main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.5) 30%,
+        rgba(0, 0, 0, 0.3) 100%);
+}
+
+header, .hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 button {
@@ -58,10 +72,14 @@ button:hover {
 }
 
 .hero-content {
-    padding: 0 90px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 100px;
     color: white;
-    margin-top: 200px;
     max-width: 800px;
+    padding-top: 150px;
 }
 
 .hero-content h1 {
@@ -95,6 +113,9 @@ button:hover {
 
 .links a:hover {
     color: #ccc;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: white;
 }
 
 .actions {
@@ -102,3 +123,190 @@ button:hover {
     display: flex;
     gap: 20px;
 }
+
+
+#about {
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-title {
+    padding-left: 0px;
+}
+
+.about-title h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: grey;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.line {
+    width: 100%;
+    height: 0.75px;
+    background-color: grey;
+    margin-bottom: 50px;
+    margin: 0;
+}
+
+.about-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 50px;
+}
+
+.about-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: black;
+    text-align: left;
+    max-width: 800px;
+}
+
+
+
+
+
+.shapes-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 80px;
+}
+
+
+.shape-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: black;
+}
+
+
+.shape p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: black;
+    text-align: center;
+    margin: 0;
+}
+
+.subtitle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.shape-1 {
+    position: relative;
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    border: 0.5px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 100px 100px 0;
+    padding: 30px;
+}
+
+
+.shape-2 {
+    position: relative;
+    width: 600px;
+    height: 250px;
+    background-color: white;
+    border: 0.5px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 0 300px 0 0;
+}
+
+.shape-3 {
+    position: relative;
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    border: 0.5px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+
+.tabs {
+    font-family: 'Montserrat', sans-serif;
+}
+.tab {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+  }
+
+  .tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .tab-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .tab-header span {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .tab-content {
+    display: none;
+    padding: 20px 0;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .tab-content p {
+    margin: 10px 0;
+  }
+
+  .tab-content img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .tab-header.active .arrow {
+    transform: rotate(90deg);
+  }
+
+  .arrow {
+    transition: transform 0.3s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
