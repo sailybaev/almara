@@ -1,21 +1,20 @@
-const tabs = document.querySelectorAll('.tab');
+document.querySelectorAll('.tab').forEach((tab) => {
+  tab.addEventListener('click', () => {
+    // Check if image already exists
+    if (!tab.querySelector('.tab-image')) {
+      const img = document.createElement('img');
+      img.src = '../assets/main2.jpg'; // your image path
+      img.classList.add('tab-image');
+      
+      const line = document.createElement('hr');
+      line.classList.add('tab-line');
 
-    tabs.forEach(tab => {
-      const header = tab.querySelector('.tab-header');
-      header.addEventListener('click', () => {
-        const content = tab.querySelector('.tab-content');
-        const isActive = header.classList.contains('active');
+      // Append elements
+      tab.appendChild(img);
+      tab.appendChild(line);
 
-        // Close all tabs
-        tabs.forEach(t => {
-          t.querySelector('.tab-header').classList.remove('active');
-          t.querySelector('.tab-content').style.display = 'none';
-        });
-
-        // Toggle current tab
-        if (!isActive) {
-          header.classList.add('active');
-          content.style.display = 'block';
-        }
-      });
-    });
+      // Trigger a roll-in animation
+      img.style.animation = 'rollIn 0.5s forwards';
+    }
+  });
+});
