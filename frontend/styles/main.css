@@ -23,7 +23,7 @@ header {
 .links {
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 45%;
 }
 
 #main {
@@ -456,6 +456,11 @@ button:hover {
   box-sizing: border-box;
   text-align: center;
   border-radius: 15px;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  opacity: 0;
+
+  
 }
 
 
@@ -463,6 +468,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;  
+  opacity: 1;
+  visibility: visible;
 }
 
 .expert-card .info-arrow {
