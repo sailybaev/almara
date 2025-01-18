@@ -119,8 +119,16 @@ window.addEventListener('scroll', () => {
     wordRight.forEach(word => {
       word.style.transform = `translateX(${translateXRight}%)`;
     });
+    
+    if (scrollPercent > 0.5) {
+      photoGrid.classList.add('visible');
+  } else {
+      photoGrid.classList.remove('visible');
+  }
   }
 });
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -150,5 +158,57 @@ const header = document.querySelector('header');
         lastScrollTop = scrollTop;
     });
 
+    // Partners section card scrolling
+    const cardScroll = document.querySelector('.card-scroll');
+    const dots = document.querySelectorAll('.dots .dot');
+    let scrollInterval;
+    let currentIndex = 0;
+
+    // Auto scroll cards
+    function startAutoScroll() {
+      scrollInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % dots.length;
+        scrollToCard(currentIndex);
+        updateDots(currentIndex);
+      }, 3000); // Change card every 3 seconds
+    }
+
+    function scrollToCard(index) {
+      const cards = document.querySelectorAll('.card-scroll .card');
+      if (cards[index]) {
+        cardScroll.scrollTo({
+          left: cards[index].offsetLeft - cardScroll.offsetLeft,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    function updateDots(activeIndex) {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === activeIndex);
+      });
+    }
+
+    // Add click handlers for dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        scrollToCard(index);
+        updateDots(index);
+        clearInterval(scrollInterval);
+        startAutoScroll();
+      });
+    });
+
+    // Handle manual scroll
+    cardScroll.addEventListener('scroll', () => {
+      const scrollPosition = cardScroll.scrollLeft;
+      const cardWidth = cardScroll.querySelector('.card').offsetWidth + 40; // 40px is the gap
+      currentIndex = Math.round(scrollPosition / cardWidth);
+      updateDots(currentIndex);
+    });
+
+    // Start auto-scrolling
+    startAutoScroll();
 });
 
