@@ -2,32 +2,43 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AlmaraPetroleum</title>
-  <link rel="stylesheet" href="styles/main.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Almara Petroleum - ведущий нефтяной оператор Казахстана">
+  <meta name="keywords" content="нефть, petroleum, kazakhstan, almara">
+
+  <title>Almara Petroleum - Ведущий нефтяной оператор Казахстана</title>
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="styles/main.css" as="style">
+  <link rel="preload" href="assets/back.png" as="image">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha384-..." crossorigin="anonymous">
+
+  <!-- Defer non-critical JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 </head>
 
 <body>
   <section id="main">
     <header>
       <div class="company-name" data-aos="fade-down">
-        <img src="assets/back.png" alt="Team Member 1" width="40" height="40" />
+        <img src="assets/back.png" alt="Almara Petroleum logo" width="40" height="40" loading="eager">
         <h2>Almara Petroleum</h2>
       </div>
 
-      <div class="links" data-aos="fade-down">
-        <a onclick="scrollToAbout()">О нас</a>
-        <a onclick="scrollToLore()">О компаний</a>
-        <a onclick="scrollToFeatures()">Партнерства</a>
-        <a onclick="scrollToExperts()">Эксперты</a>
-        <a onclick="scrollToReviews()">Продукты</a>
-      </div>
+      <nav class="links" data-aos="fade-down">
+        <a href="#about" onclick="scrollToAbout()" role="button">О нас</a>
+        <a href="#company" onclick="scrollToLore()" role="button">О компаний</a>
+        <a href="#partnerships" onclick="scrollToFeatures()" role="button">Партнерства</a>
+        <a href="#experts" onclick="scrollToExperts()" role="button">Эксперты</a>
+        <a href="#products" onclick="scrollToReviews()" role="button">Продукты</a>
+      </nav>
 
-      <button data-aos="fade-down" onclick="scrollToFooter()">
+      <button type="button" data-aos="fade-down" onclick="scrollToFooter()" aria-label="Связаться с нами">
         Связаться с нами
       </button>
     </header>
@@ -46,6 +57,7 @@
     </div>
   </section>
 
+
   <section id="slova">
     <div class="word-container">
       <span class="word wordLeft">ЛИДЕРЫ</span>
@@ -56,8 +68,8 @@
     </div>
 
     <div class="photo-grid">
-      <div class="photo-item large" data-aos="fade-up">
-        <img src="assets/main3.jpg" alt="Grid Image 1" />
+      <div class="photo-item large blur-load" data-aos="fade-up" style="background-image: url('assets/main3-small.jpg')">
+        <img src="assets/main3.jpg" alt="Grid Image 1" loading="lazy" />
       </div>
       <div class="photo-item" data-aos="fade-up" data-aos-delay="100">
         <img src="assets/fade1.jpg" alt="Grid Image 2" />
@@ -83,7 +95,7 @@
     <div class="about-content" data-aos="zoom-in-up">
       <div class="shape shape-4" data-aos="zoom-out-up">
         <span class="shape-title">1070+</span>
-        <span class="subtitle">Постоянных клиентов</span>
+        <span class="subtitle">Клиентов</span>
       </div>
 
       <p>
@@ -103,7 +115,7 @@
         <span class="subtitle">Обороты в год</span>
       </div>
       <div class="shape shape-3" data-aos="zoom-out-up">
-        <span class="shape-title">271k+ тонн</span>
+        <span class="shape-title">271kk кг</span>
         <span class="subtitle">Общий объем реализованных нефтепродуктов</span>
       </div>
     </div>
@@ -189,8 +201,8 @@
               Начиная с небольших объемов продаж, за послендие два года компания
               значительно расширила географию деятельности, увеличила объемы
               хранения и аренды нефтебаз. На сегодняшний день годовой оборот
-              компании превышает <b>9 млрд тенге</b>. 
-              
+              компании превышает <b>9 млрд тенге</b>.
+
             </p>
           </div>
         </div>
@@ -261,7 +273,7 @@
         <h1>6 причин выбрать Almara Petroleum:</h1>
       </div>
       <div class="grid">
-        
+
 
         <div class="card" data-aos="flip-up" data-aos-delay="100" data-aos-offset="200">
           <span class="icon">📑</span>
@@ -281,8 +293,8 @@
             позволяет нашим клиентам уверенно планировать свою деятельность, минимизировать риски простоя техники и
             гарантировать стабильность своих операций.
         </div>
-        
-        
+
+
 
         <div class="card" data-aos="flip-up" data-aos-delay="200" data-aos-offset="200">
           <span class="icon">🔄</span>
@@ -304,7 +316,7 @@
             качества ГСМ на каждом этапе логистической цепочки.
           </p>
         </div>
-        
+
 
         <div class="card" data-aos="flip-up" data-aos-delay="100">
           <span class="icon">⚡️</span>
@@ -335,7 +347,7 @@
       <h1>Отчет о благотворительной помощи</h1>
     </div>
 
-    <div class="container">
+    <div class="container-c">
       <div class="layout">
         <div class="left-section">
           <div class="main-image">
@@ -366,8 +378,9 @@
             ситуациях. Это может быть помощь в лечении, покрытие неотложных расходов или поддержка в трудный период
             жизни.</p>
 
-          <p data-aos="fade-up" style="color:black"><b> <i> Мы продолжим нашу работу, стремясь к созданию лучшего будущего для общества, помогая
-            тем, кто действительно в этом нуждается.</i></b></p>
+          <p data-aos="fade-up" style="color:black"><b> <i> Мы продолжим нашу работу, стремясь к созданию лучшего
+                будущего для общества, помогая
+                тем, кто действительно в этом нуждается.</i></b></p>
           </p>
 
         </div>
@@ -403,7 +416,7 @@
       <h1 data-aos="fade-up"></h1>
       <h1 data-aos="fade-up">Продукты</h1>
 
-    
+
 
       <div id="reviews" class="review" data-aos="fade-up">
         <img src="assets/man1.jpg" alt="Sarah Mitchell" />
@@ -524,7 +537,7 @@
 
 
       <div class="expert-card" data-aos="zoom-in-up" data-aos-offset="100">
-        <img src="assets/gulnaznurlanqyzy.jpeg" alt="Team Member 1"/>
+        <img src="assets/gulnaznurlanqyzy.jpeg" alt="Team Member 1" />
 
         <div class="expert-info">
 
@@ -538,9 +551,9 @@
         </div>
       </div>
 
-      
 
-      
+
+
 
       <div class="expert-card vis" data-aos="zoom-in-up" data-aos-offset="400">
         <img src="assets/adam.png" alt="Team Member 1" />
@@ -618,7 +631,8 @@
           <div class="card-image" style="background-image: url('assets/citic.jpg')"></div>
           <div class="card-content">
             <div class="card-date">CITIC Construction Co.,Ltd</div>
-            <div class="card-title">Компания CITIC Construction в Казахстане специализируется на строительстве и ремонте дорог.</div>
+            <div class="card-title">Компания CITIC Construction в Казахстане специализируется на строительстве и ремонте
+              дорог.</div>
           </div>
         </div>
 
@@ -626,7 +640,8 @@
           <div class="card-image" style="background-image: url('assets/midas.png')"></div>
           <div class="card-content">
             <div class="card-date">СП Сине Мидас Строй ТОО</div>
-            <div class="card-title">была создана в 2006 году и является одной из ведущих строительных компаний, работающих в области дорожного строительства. </div>
+            <div class="card-title">была создана в 2006 году и является одной из ведущих строительных компаний,
+              работающих в области дорожного строительства. </div>
           </div>
         </div>
 
@@ -647,69 +662,67 @@
     <div class="title" data-aos="fade-up">
       <h1>Наша команда</h1>
     </div>
-    
+
     <div class="team-gallery" data-aos="fade-up">
-        <div class="gallery-item tall" >
-            <img src="assets/team.jpeg" alt="Team Member">
-            <div class="overlay">
+      <div class="gallery-item blur-load" style="background-image: url('assets/team-small.jpeg')">
+        <img src="assets/team.jpeg" alt="Team Member" loading="lazy">
+        <div class="overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/team5.jpeg" alt="Team Member">
+        <div class="overlay">
 
-            </div>
         </div>
-        <div class="gallery-item" >
-            <img src="assets/team5.jpeg" alt="Team Member">
-            <div class="overlay">
+      </div>
+      <div class="gallery-item wide">
+        <img src="assets/team3.jpeg" alt="Team Member">
+        <div class="overlay">
 
-            </div>
         </div>
-        <div class="gallery-item wide" >
-            <img src="assets/team3.jpeg" alt="Team Member">
-            <div class="overlay">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/team4.jpeg" alt="Team Member">
+        <div class="overlay">
 
-            </div>
         </div>
-        <div class="gallery-item" >
-            <img src="assets/team4.jpeg" alt="Team Member">
-            <div class="overlay">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/team2.jpeg" alt="Team Member">
+        <div class="overlay">
 
-            </div>
         </div>
-        <div class="gallery-item" >
-            <img src="assets/team2.jpeg" alt="Team Member">
-            <div class="overlay">
+      </div>
+      <div class="gallery-item wide">
+        <img src="assets/team6.jpeg" alt="Team Member">
+        <div class="overlay">
 
-            </div>
         </div>
-        <div class="gallery-item wide">
-            <img src="assets/team6.jpeg" alt="Team Member">
-            <div class="overlay">
+      </div>
+      <div class="gallery-item tall">
+        <img src="assets/team7.jpeg" alt="Team Member">
+        <div class="overlay">
 
-            </div>
         </div>
-        <div class="gallery-item tall" >
-            <img src="assets/team7.jpeg" alt="Team Member">
-            <div class="overlay">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/team8.jpeg" alt="Team Member">
+        <div class="overlay">
 
-            </div>
         </div>
-        <div class="gallery-item" >
-            <img src="assets/team8.jpeg" alt="Team Member">
-            <div class="overlay">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/team9.jpeg" alt="Team Member">
+        <div class="overlay">
 
-            </div>
         </div>
-        <div class="gallery-item" >
-            <img src="assets/team9.jpeg" alt="Team Member">
-            <div class="overlay">
-
-            </div>
+      </div>
+      <div class="gallery-item wide">
+        <img src="assets/team10.jpeg" alt="Team Member">
+        <div class="overlay">
         </div>
-        <div class="gallery-item wide" >
-            <img src="assets/team10.jpeg" alt="Team Member">
-            <div class="overlay">
-            </div>
-        </div>
+      </div>
     </div>
-</section>
+  </section>
 
   <section id="footer">
     <footer class="footer">
@@ -738,7 +751,8 @@
           <h4>Контакты</h4>
           <p><a href="mailto:almara.petroleum@bk.ru">Email: almara.petroleum@bk.ru</a></p>
           <p><a href="https://wa.me/+77017076707">Телефон: +7 701 707 67 07</a></p>
-          <p><a href="https://go.2gis.com/u7yPU" target="_blank">Адрес: Казахстан, г. Астана, ул. Байтурсынова,5, блок D6,  н.п 45</a></p>
+          <p><a href="https://go.2gis.com/u7yPU" target="_blank">Адрес: Казахстан, г. Астана, ул. Байтурсынова,5, блок
+              D6, н.п 45</a></p>
           <p class="social-link">
             <a href="https://www.instagram.com/almara.petroleum/" target="_blank">
               <i class="fab fa-instagram"></i> almara.petroleum
@@ -760,9 +774,12 @@
 <script src="scripts/main.js"></script>
 <script>
   AOS.init({
-    duration: 900,
-    anchorPlacement: "top-bottom",
-  });
+  duration: 900,
+  once: true,
+  disable: 'mobile', // Disable on mobile devices
+  startEvent: 'DOMContentLoaded',
+  offset: 50
+});
 </script>
 
 </html>
