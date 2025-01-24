@@ -45,27 +45,34 @@
       </div>
 
       <nav class="links" data-aos="fade-down">
-        <a href="#about" onclick="scrollToAbout()" role="button">О нас</a>
-        <a href="#company" onclick="scrollToLore()" role="button">О компаний</a>
-        <a href="#partnerships" onclick="scrollToFeatures()" role="button">Партнерства</a>
-        <a href="#experts" onclick="scrollToExperts()" role="button">Эксперты</a>
-        <a href="#products" onclick="scrollToReviews()" role="button">Продукты</a>
+        <a href="#about" onclick="scrollToAbout()" role="button" data-translate="about">О нас</a>
+        <a href="#company" onclick="scrollToLore()" role="button" data-translate="company">О компаний</a>
+        <a href="#partnerships" onclick="scrollToFeatures()" role="button" data-translate="partnerships">Партнерства</a>
+        <a href="#experts" onclick="scrollToExperts()" role="button" data-translate="experts">Эксперты</a>
+        <a href="#products" onclick="scrollToReviews()" role="button" data-translate="products">Продукты</a>
+        
+        <!-- Add language switcher -->
+        <div class="language-switcher">
+          <button onclick="switchLanguage('ru')" class="lang-btn active" data-lang="ru">RU</button>
+          <button onclick="switchLanguage('kz')" class="lang-btn" data-lang="kz">KZ</button>
+          <button onclick="switchLanguage('en')" class="lang-btn" data-lang="en">EN</button>
+        </div>
       </nav>
 
-      <button type="button" data-aos="fade-down" onclick="scrollToFooter()" aria-label="Связаться с нами">
+      <button type="button" data-aos="fade-down" onclick="scrollToFooter()" aria-label="Связаться с нами" data-translate="contact">
         Связаться с нами
       </button>
     </header>
 
     <div class="hero-content" data-aos="zoom-in-right">
-      <h1>Будущее начинается с энергии</h1>
-      <p>
+      <h1 data-translate="hero_title">Будущее начинается с энергии</h1>
+      <p data-translate="hero_description">
         Almara Petroleum - ведущий нефтяной оператор Казахстана,
         специализирующийся на продаже и доставке нефти и нефтепродуктов.
       </p>
 
       <div class="actions" data-aos="fade-up">
-        <button onclick="scrollToAbout()">Узнать больше</button>
+        <button onclick="scrollToAbout()" data-translate="learn_more">Узнать больше</button>
         <button onclick="scrollToFooter()">Связаться с нами</button>
       </div>
     </div>
@@ -74,8 +81,8 @@
 
   <section id="slova">
     <div class="word-container">
-      <span class="word wordLeft">ЛИДЕРЫ</span>
-      <span class="word wordRight">ВЕДУЩИЕ </span>
+      <span class="word wordLeft" data-translate="word_leaders">ЛИДЕРЫ</span>
+      <span class="word wordRight" data-translate="word_leading">ВЕДУЩИЕ </span>
       <span class="word wordRight">ПОСТАВЩИКИ ГСМ</span>
       <span class="word wordLeft">ИННОВАТОРЫ</span>
 
@@ -214,7 +221,7 @@
           </div>
           <div class="tab-text">
             <p class="tab-description">
-              Начиная с небольших объемов продаж, за послендие два года компания
+              Начиная с небольших объемов продаж, за последние два года компания
               значительно расширила географию деятельности, увеличила объемы
               хранения и аренды нефтебаз. На сегодняшний день годовой оборот
               компании превышает <b>9 млрд тенге</b>.
@@ -788,4 +795,5 @@
 </body>
 
 <script src="scripts/main.js"></script>
+<script src="scripts/translations.js"></script>
 </html>

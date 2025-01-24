@@ -1854,3 +1854,35 @@ h2 {
     background-color: rgba(255, 255, 255, 0);
   }
 }
+
+.language-switcher {
+  display: flex;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.lang-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-btn.active {
+  background: white;
+  color: rgb(55, 90, 152);
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    margin: 10px 0;
+  }
+}

@@ -232,3 +232,33 @@ function setupImageLoading() {
   });
 }
 
+let currentLang = 'ru';
+
+function switchLanguage(lang) {
+  currentLang = lang;
+  
+  // Update active button state
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.dataset.lang === lang) {
+      btn.classList.add('active');
+    }
+  });
+
+  // Update text content
+  document.querySelectorAll('[data-translate]').forEach(element => {
+    const key = element.dataset.translate;
+    if (translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+  });
+
+  // Update HTML lang attribute
+  document.documentElement.lang = lang;
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', () => {
+  switchLanguage('ru');
+});
+
