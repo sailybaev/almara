@@ -1,7 +1,7 @@
 const translations = {
   ru: {
     about: "О нас",
-    company: "О компаний",
+    company: "О компании",
     partnerships: "Партнерства",
     experts: "Эксперты",
     products: "Продукты",
