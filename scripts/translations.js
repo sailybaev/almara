@@ -90,14 +90,14 @@ const translations = {
     name4: "Тлеулиев Бауржан",
 
     job1: "Директор компаний",
-    job2: "Заместитель директора продажы ГСМ",
+    job2: "Заместитель директора продаж ГСМ",
     job3: "Руководитель Отдела Продаж",
     job4: "Коммерческий директор",
 
-    text1: "Более 18 летний опыт работы Руководил командой свыше 50+ человек Заключил контракты с крупнейшими игроками отрасли в Казахстане",
-    text2: "Успешно работал в компаниях (КазМунайГаз, Гелиос, Газпромнефть) Внедрил аналитические инструменты, повысившие эффективность работы на 80%.",
-    text3: "Обеспечила прибыльность в новых регионах Увеличила объем продаж на 100% Расширила клиентскую базу на 98%",
-    text4: "Оптимизировал расходы компании за 3 года на 10% Запустил программу повышения квалификации сотрудников, поднявший уровень удовлетворенности персонала на 55%",
+    text1: "Более 18 летний опыт работы, руководил командой свыше 50+ человек, заключил контракты с крупнейшими игроками отрасли в Казахстане",
+    text2: "Успешно работал в компаниях (КазМунайГаз, Гелиос, Газпромнефть), внедрил аналитические инструменты повысившие эффективность работы на 80%.",
+    text3: "Обеспечила прибыльность в новых регионах, увеличила объем продаж на 100%, расширила клиентскую базу на 98%",
+    text4: "Оптимизировал расходы компании за 3 года на 10%, запустил программу повышения квалификации сотрудников, поднявший уровень удовлетворенности персонала на 55%",
 
 
     partners_title: "Партнеры",
@@ -235,10 +235,10 @@ const translations = {
     job3: "Сату бөлімінің бастығы",
     job4: "Коммерциялық директор",
 
-    text1: "18 жылдан астам тәжірибесі 50-ден астам адамнан тұратын команданы басқарды Қазақстандағы ең ірі сала ойыншыларымен келісімшарттар жасасты",
-    text2: "Компанияларда табысты жұмыс істеді (ҚазМұнайГаз, Гелиос, Газпромнефть) Жұмыс тиімділігін 80%-ға арттыратын аналитикалық құралдар енгізілді.",
-    text3: "Жаңа аймақтарда рентабельділік қамтамасыз етілді Сату көлемі 100%-ға артты Клиенттер базасы 98%-ға кеңейтілді",
-    text4: "3 жылда компанияның шығындарын 10%-ға оңтайландырды Қызметкерлерді оқыту бағдарламасы іске қосылды, бұл қызметкерлердің қанағаттануын 55%-ға арттырды.",
+    text1: "18 жылдан астам тәжірибесі бар, 50-ден астам адамнан тұратын команданы басқарды, Қазақстандағы ең ірі сала ойыншыларымен келісімшарттар жасасты",
+    text2: "Компанияларда табысты жұмыс істеді (ҚазМұнайГаз, Гелиос, Газпромнефть), жұмыс тиімділігін 80%-ға арттыратын аналитикалық құралдар енгізді.",
+    text3: "Жаңа аймақтарда рентабельділік қамтамасыз етті, сату көлемі 100%-ға артты, клиенттер базасы 98%-ға кеңейтілді",
+    text4: "3 жылда компанияның шығындарын 10%-ға оңтайландырды, қызметкерлерді оқыту бағдарламасы іске қосылды, бұл қызметкерлердің қанағаттануын 55%-ға арттырды.",
 
 
     partners_title: "Партнерлар",
@@ -379,10 +379,10 @@ const translations = {
     job3: "Head of Sales Department",
     job4: "Commercial Director",
 
-    text1: "More than 18 years of experience Managed a team of over 50+ people Concluded contracts with the largest industry players in Kazakhstan",
-    text2: "Successfully worked in companies (KazMunaiGas, Helios, Gazpromneft) Implemented analytical tools that increased work efficiency by 80%.",
-    text3: "Ensured profitability in new regions Increased sales by 100% Expanded the customer base by 98%",
-    text4: "Optimized the company's expenses by 10% in 3 years Launched an employee training program that increased employee satisfaction by 55%",
+    text1: "More than 18 years of experience, managed a team of over 50+ people, concluded contracts with the largest industry players in Kazakhstan",
+    text2: "Successfully worked in companies (KazMunaiGas, Helios, Gazpromneft), implemented analytical tools that increased work efficiency by 80%.",
+    text3: "Ensured profitability in new regions, increased sales by 100% Expanded the customer base by 98%",
+    text4: "Optimized the company's expenses by 10% in 3 years, launched an employee training program that increased employee satisfaction by 55%",
 
 
 
